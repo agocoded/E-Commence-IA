@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "TSOFI",
+    "slug": "TSOFI",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "TSOFI"
+}
