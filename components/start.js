@@ -10,8 +10,8 @@ export default function start({navigation}) {
        <View style={styles.main} >
        
         <View style={styles.kebab}>
-        <Image source={require('../assets/meat.jpg')}  style={{width:160,
-          height:160,  borderRadius:10,}}/>
+        <Image source={require('../assets/main.png')}  style={{width:200,
+          height:200  ,  borderRadius:10,}}/>
         </View>
 
         <View style={styles.na}>
@@ -43,11 +43,12 @@ const styles = StyleSheet.create({
 
   na:{
     flex:1,
-    marginLeft:5
+    marginLeft:10,
+    marginTop:70,
   },
   
   nam:{
-    fontSize:55,
+    fontSize:60,
     fontWeight:'bold',
 
   },
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
   kebab:{
     flex:1,
     alignItems: 'flex-end',
- 
+    marginTop: 12,
   },
 
   car:{
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     width: '55%',
-    height: '20%',
+    height: '25%',
     borderRadius: 30,
 
   }, 
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
-    marginRight: -18,
+    marginRight: -19,
     marginBottom: 5,
   },
 
