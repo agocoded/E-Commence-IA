@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { AntDesign } from '@expo/vector-icons';
-import { ImageBackground,Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import { Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 
 export default function start({navigation}) {
@@ -17,7 +17,7 @@ export default function start({navigation}) {
         <View style={styles.na}>
           <Text style={styles.nam}> Welcome </Text>
           <Text style={styles.nam}> to </Text>
-          <Text style={styles.nam}> Ts<Text style={{color:'#fff'}}>o</Text>fi </Text>
+          <Text style={styles.nam}> W<Text style={{color:'#fff'}}>a</Text>l<Text style={{color:'#fff'}}>a-</Text>Kp<Text style={{color:'#fff'}}>a</Text>kp<Text style={{color:'#fff'}}>a</Text> </Text>
         </View>
           
     
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
     marginRight: -19,
-    marginBottom: 5,
+    marginBottom: 10,
   },
 
   texts:{

@@ -2,7 +2,7 @@
 import React from 'react';
 import { ImageBackground, SafeAreaView, ScrollView, StyleSheet, Text, View, TouchableOpacity, StatusBar } from 'react-native';
 
-export default function Collections() {
+export default function Collections({navigation}) {
   return (
 
 
@@ -12,12 +12,14 @@ export default function Collections() {
         <View style={styles.row}>
 
             <View style={{width:'47%'}}>
-              <TouchableOpacity style={styles.ro1}>
+              <TouchableOpacity style={styles.ro1} 
+              onPress={() => navigation.push("afri", { name: "afri" })}>
                 
                 <ImageBackground
                 style={styles.image}
                 imageStyle={{ borderRadius: 10}}
-                source={require('../assets/fufu.jpg')} >
+                source={require('../assets/fufu.jpg')}
+                 >
 
                 <View style={{marginTop:100,}}>
                 <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>African Dishes</Text>
