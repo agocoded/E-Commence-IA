@@ -26,8 +26,8 @@ export default function start({navigation}) {
         <TouchableOpacity style={styles.touches}>
           <Text 
           style={styles.texts} 
-          onPress={() => navigation.push("Collections", { name: "Collections" })
-        }> Start <AntDesign name="arrowright" size={25} color="#0a013b" /></Text>
+          onPress={() => navigation.push("Collections", { name: "Collections" })} >
+         Start <AntDesign name="arrowright" size={25} color="#0a013b" /></Text>
 
         </TouchableOpacity>
         </View>

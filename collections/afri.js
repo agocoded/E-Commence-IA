@@ -6,7 +6,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
 
-export default function afri() {
+export default function afri({navigation}) {
   return (
        <View style={styles.bac} >
 
@@ -18,7 +18,7 @@ export default function afri() {
           <View style={{width:'100%', height:'15%', flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginHorizontal:10}}>
 
             <TouchableOpacity >
-              <Ionicons name="arrow-back-circle" size={34} color="#08003d" />
+             <Ionicons name="chevron-back" size={34} color="black" />
             </TouchableOpacity>
 
             <TouchableOpacity style={{marginRight:18}}>
@@ -38,17 +38,17 @@ export default function afri() {
             
             <View> 
               <Text style={{fontSize: 25, color:'#fff', fontWeight: 'bold'}}> 4.5 </Text>
-              <Text style={{fontSize: 16, color:'#565656', }}> Ratings</Text>
+              <Text style={{fontSize: 16, color:'#08003d', fontWeight: 'bold' }}> Ratings</Text>
             </View>
 
             <View> 
               <Text style={{fontSize: 25, color:'#fff'}}> 137K  </Text>
-              <Text style={{fontSize: 16, color:'#565656',}}>Bookmarks </Text>
+              <Text style={{fontSize: 16, color:'#08003d', fontWeight: 'bold'}}>Bookmarks </Text>
             </View>
 
             <View>
               <Text style={{fontSize: 25, color:'#fff', fontWeight: 'bold'}}> 246 </Text>
-              <Text style={{fontSize: 16, color:'#565656', fontWeight: 'bold'}}> Photos </Text>
+              <Text style={{fontSize: 16, color:'#08003d', fontWeight: 'bold'}}> Photos </Text>
             </View>
 
           </View>
@@ -57,12 +57,13 @@ export default function afri() {
           <View style={{flex:1, flexDirection: 'row', justifyContent: 'space-between', marginHorizontal:10, }}>
 
           <View style={{width: '70%'}}> 
-              <Text style={{fontSize: 16, color:'#565656'}}>Pickup on your time. Your order is  </Text>
-              <Text style={{fontSize: 16, color:'#565656',}}>ready when you are </Text>
+              <Text style={{fontSize: 16, color:'#08003d', }}>Pickup on your time. Your order is  </Text>
+              <Text style={{fontSize: 16, color:'#08003d',}}>ready when you are </Text>
             </View>
 
             <View style={{width: '30%', marginTop:9}}>
-              <TouchableOpacity style={{backgroundColor:'#fcaf01', borderRadius:10, height: 33,  justifyContent:'center', alignItems:'center'}}>
+              <TouchableOpacity style={{backgroundColor:'#fcaf01', borderRadius:10, height: 33,  justifyContent:'center', alignItems:'center'}}
+                onPress={() => navigation.push("cart", { name: "cart" })}>
                 <Text style={{ fontWeight: 'bold', fontSize: 20, color:'#08003d',}}> Order Now</Text>
               </TouchableOpacity>
             </View>
@@ -79,16 +80,14 @@ export default function afri() {
           {/* overall container */}
           <View style={{flex:1}}>
 
-            <View style={{ marginTop: 23,width: '100%', height:'7%', backgroundColor: '#f7f6f9', justifyContent:'center', alignItems:'center'}}>
-              <Text style={{ fontSize:15, fontWeight:'bold', color: '#08003d'}}>Featured Items</Text>
-            </View>
+              <View style={{ marginBottom:7 ,width: '100%', height:'7%', justifyContent:'center', alignItems:'center',}}>
+                  <Text style={{ fontSize:15, fontWeight:'bold', color: '#08003d'}}>Featured Items</Text>
+              </View>
+
 
             {/* Second row */}
             {/* added a scrollview to guide the height cos different screens */}
 
-
-            <SafeAreaView style={styles.container}>
-            <ScrollView style={styles.scrollView}>
 
               {/* row 1 */}
               <View style={{marginBottom:5 ,flexDirection:'row', justifyContent:'space-around', height: 180, width:'100%',}}> 
@@ -125,7 +124,7 @@ export default function afri() {
               </View>
 
               {/* row 2 */}
-              <View style={{flexDirection:'row', justifyContent:'space-around', height: 180, width:'100%',}}> 
+              <View style={{marginBottom:1 ,flexDirection:'row', justifyContent:'space-around', height: 180, width:'100%',}}> 
 
                 <View style={styles.button}>
 
@@ -157,11 +156,7 @@ export default function afri() {
                 </View>
 
               </View>
-              
-            </ScrollView>
-            </SafeAreaView>
 
-           
 
             </View>
 
