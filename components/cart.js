@@ -6,7 +6,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
 
-export default function cart() {
+export default function cart({navigation}) {
   return (
     
         // main view compo
@@ -15,7 +15,9 @@ export default function cart() {
             <View style={{width:'100%', height:'12%', flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginHorizontal:10}}>
 
                 <TouchableOpacity >
-                <Ionicons name="chevron-back" size={34} color="black" />
+                <Ionicons name="chevron-back" size={34} color="black" 
+                  onPress={() => navigation.push("afri", { name: "afri" })}
+                />
                 </TouchableOpacity>
 
                 <Text style={{fontSize:26, fontWeight:'bold', color: '#08003d'}}> My Order</Text>
@@ -28,15 +30,15 @@ export default function cart() {
 
             <View style={{ marginTop: -11, width:'100%', height:'7%', flexDirection:'row', alignItems:'center', justifyContent:'space-around',}} >
 
-                <View style={{width: '25%', height:'80%',backgroundColor:'#08003d', borderRadius: 20,  alignItems:'center' }}> 
+                <View style={{width: '25%', height:'80%',backgroundColor:'#08003d', borderRadius: 20,  alignItems:'center',  justifyContent:'center' }}> 
                     <Text style={{fontSize:23, color:'#fff'}}> All </Text> 
                 </View>
 
-                <View style={{width: '25%', height:'80%',   alignItems:'center' }}> 
+                <View style={{width: '25%', height:'80%',   alignItems:'center', justifyContent:'center' }}> 
                     <Text style={{fontSize:23, color:'#505256'}}> Coming </Text> 
                 </View>
 
-                <View style={{width: '25%', height:'80%', alignItems:'center' }}> 
+                <View style={{width: '25%', height:'80%', alignItems:'center', justifyContent:'center' }}> 
                     <Text style={{fontSize:23, color:'#505256'}}> History </Text> 
                 </View>
                 

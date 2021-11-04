@@ -18,7 +18,9 @@ export default function afri({navigation}) {
           <View style={{width:'100%', height:'15%', flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginHorizontal:10}}>
 
             <TouchableOpacity >
-             <Ionicons name="chevron-back" size={34} color="black" />
+             <Ionicons name="chevron-back" size={34} color="black" 
+                onPress={() => navigation.push("Collections", { name: "Collections" })}
+             />
             </TouchableOpacity>
 
             <TouchableOpacity style={{marginRight:18}}>
@@ -56,15 +58,15 @@ export default function afri({navigation}) {
           {/* screen 4 */}
           <View style={{flex:1, flexDirection: 'row', justifyContent: 'space-between', marginHorizontal:10, }}>
 
-          <View style={{width: '70%'}}> 
+          <View style={{width: '70%',}}> 
               <Text style={{fontSize: 16, color:'#08003d', }}>Pickup on your time. Your order is  </Text>
               <Text style={{fontSize: 16, color:'#08003d',}}>ready when you are </Text>
             </View>
 
-            <View style={{width: '30%', marginTop:9}}>
+            <View style={{width: '30%', height: 33, marginTop:9, }}>
               <TouchableOpacity style={{backgroundColor:'#fcaf01', borderRadius:10, height: 33,  justifyContent:'center', alignItems:'center'}}
                 onPress={() => navigation.push("cart", { name: "cart" })}>
-                <Text style={{ fontWeight: 'bold', fontSize: 20, color:'#08003d',}}> Order Now</Text>
+                <Text style={{ fontWeight: 'bold', fontSize: 17, color:'#08003d',}}> Order Now</Text>
               </TouchableOpacity>
             </View>
             

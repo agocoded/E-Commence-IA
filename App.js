@@ -7,12 +7,16 @@ import Start from './components/start';
 import Collections from './components/Collections';
 import afri from './collections/afri';
 import cart from './components/cart';
+import login from './components/login';
+import signup from './components/signup';
+import home from './components/home';
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
+
       <Stack.Navigator>
       
       <Stack.Screen
@@ -22,9 +26,28 @@ export default function App() {
       />
 
       <Stack.Screen
+      name="login"
+      component={login}
+      options={{ title: "" },{header: () => null}}
+      />
+
+      <Stack.Screen
+      name="signup"
+      component={signup}
+      options={{ title: "" },{header: () => null}}
+      />
+
+      <Stack.Screen
+      name="home"
+      component={home}
+      options={{ title: "" },{header: () => null}}
+      />
+
+      <Stack.Screen
       name="Collections"
       component={Collections}
-      options={{ title: "Collections" }}
+      // options={{ title: "Collections" }}
+      options={{ title: "" },{header: () => null}}
       />
 
       <Stack.Screen

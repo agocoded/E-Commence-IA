@@ -1,148 +1,237 @@
 
 import React from 'react';
-import { ImageBackground,  SafeAreaView, ScrollView, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import { 
+  Image, 
+  ImageBackground,
+  StyleSheet, 
+  Text, 
+  TextInput,
+  SafeAreaView, 
+  ScrollView, 
+  View, 
+  TouchableOpacity
+} from 'react-native';
 
-import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
 
-export default function afri() {
+export default function home({navigation}) {
   return (
-       <View style={styles.bac} >
 
-         <ImageBackground source={require('../assets/afrima.png')} style={styles.back}
-         blurRadius={1.5} >
+       <View style={styles.main} >
 
-        <View style={styles.dv1}>
-
-          <View style={{width:'100%', height:'15%', flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginHorizontal:10}}>
-
+            <View style={{width:'100%', backgroundColor:'#fff', marginBottom:5,
+                height:'10%', flexDirection:'row', alignItems:'center', justifyContent:'space-between',
+                }}>
+            
             <TouchableOpacity >
-              <Ionicons name="arrow-back-circle" size={34} color="#08003d" />
+            <Ionicons name="chevron-back" size={34} color="black" 
+                onPress={() => navigation.push("afri", { name: "afri" })}
+            />
             </TouchableOpacity>
+
+            <Text style={{fontSize:26, fontWeight:'bold', color: '#08003d'}}>Home</Text>
 
             <TouchableOpacity style={{marginRight:18}}>
-              <FontAwesome name="heart" size={29} color="#08003d" />
+            <Ionicons name="fast-food-outline" size={35} color="black" />
             </TouchableOpacity>
-           
-          </View>
 
-            {/* screen 2 */}
-          <View style={{marginLeft:20, marginTop:5}}  >
-            <Text style={{fontSize: 37, color:'#fff'}}> African Dishes </Text>
-            <Text style={{fontSize: 18, color:'#fff', marginLeft:20}}> 03 Jamaican Street apt77</Text>
-          </View>
-
-          {/* screen 3 */}
-          <View style={{flex:1, flexDirection: 'row', justifyContent: 'space-around', marginTop:4}}>
-            
-            <View> 
-              <Text style={{fontSize: 25, color:'#fff', fontWeight: 'bold'}}> 4.5 </Text>
-              <Text style={{fontSize: 16, color:'#565656', }}> Ratings</Text>
             </View>
 
-            <View> 
-              <Text style={{fontSize: 25, color:'#fff'}}> 137K  </Text>
-              <Text style={{fontSize: 16, color:'#565656',}}>Bookmarks </Text>
-            </View>
+                
+                {/* The midle compo */}
 
-            <View>
-              <Text style={{fontSize: 25, color:'#fff', fontWeight: 'bold'}}> 246 </Text>
-              <Text style={{fontSize: 16, color:'#565656', fontWeight: 'bold'}}> Photos </Text>
-            </View>
+                <View style={styles.roller}>
 
-          </View>
-
-          {/* screen 4 */}
-          <View style={{flex:1, flexDirection: 'row', justifyContent: 'space-between', marginHorizontal:10, }}>
-
-          <View style={{width: '70%'}}> 
-              <Text style={{fontSize: 16, color:'#565656'}}>Pickup on your time. Your order is  </Text>
-              <Text style={{fontSize: 16, color:'#565656',}}>Ready when you are </Text>
-            </View>
-
-            <View style={{width: '30%', marginTop:9}}>
-              <TouchableOpacity style={{backgroundColor:'#fcaf01', borderRadius:10, height: 33,  justifyContent:'center', alignItems:'center'}}>
-                <Text style={{ fontWeight: 'bold', fontSize: 20, color:'#08003d',}}> Order Now</Text>
-              </TouchableOpacity>
-            </View>
-            
-          </View>
-
-        </View>
+                    <SafeAreaView style={styles.container}>
+                    <ScrollView style={styles.scrollView}>
 
 
+                    {/* row 1 */}
 
-        {/* div 2 */}
-        <View style={styles.dv2}>
-          <TouchableOpacity style={styles.dv2touch}>
+                    <View style={styles.row}>
 
-            {/* overall container */}
-            <View style={{flex:1}}>
+                        <View style={{width:'47%', height:'100%',  alignItems: 'center'}}>
 
-              <View style={{ marginTop: 23,width: '100%', height:'7%', backgroundColor: '#f7f6f9', justifyContent:'center', alignItems:'center'}}>
-                <Text style={{ fontSize:15, fontWeight:'bold', color: '#08003d'}}>Featured Items</Text>
-              </View>
+                            <TouchableOpacity style={{width:'100%', height:'100%', justifyContent:'center', alignItems:'center'}}>
 
-              {/* Second row */}
-              {/* added a scrollview to guide the height cos different screens */}
+                                <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
+                                source={require('../assets/noodles.jpg')} />
+                                
+                                <View style={{marginTop:-1,}}>
+                                <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>Desserts</Text>
+                                <Text style={{color:'#5f5e5c', fontSize:18, marginLeft:-10}}>  160 places</Text>
+                                </View>
 
-              <SafeAreaView style={styles.container}>
-              <ScrollView style={styles.scrollView}>
+                            </TouchableOpacity>
 
-              <View >
+                        </View>
 
-                {/* row 1 */}
-                <View style={{flexDirection:'row', justifyContent:'space-around', height: 170, width:'100%',}}> 
+                        <View style={{width:'47%', height:'100%',  alignItems: 'center'}}>
 
-                  <View style={{ height: '100%', width:'47%', backgroundColor:'blue'}}>
-                    
-                  </View>
+                            <TouchableOpacity style={{width:'100%', height:'100%', justifyContent:'center', alignItems:'center'}}>
 
-                  <View style={{ height: '100%', width:'47%', backgroundColor:'red'}}>
-                    <Text> Sup</Text>
-                  </View>
+                                <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
+                                source={require('../assets/noodles.jpg')} />
+                                
+                                <View style={{marginTop:-1,}}>
+                                <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>Desserts</Text>
+                                <Text style={{color:'#5f5e5c', fontSize:18, marginLeft:-10}}>  160 places</Text>
+                                </View>
+
+                            </TouchableOpacity>
+
+                        </View>
+
+                    </View>
+
+
+                    {/* row 2 */}
+
+                    <View style={styles.row}>
+
+                        <View style={{width:'47%', height:'100%',  alignItems: 'center'}}>
+
+                            <TouchableOpacity style={{width:'100%', height:'100%', justifyContent:'center', alignItems:'center'}}>
+
+                                <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
+                                source={require('../assets/noodles.jpg')} />
+                                
+                                <View style={{marginTop:-1,}}>
+                                <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>Desserts</Text>
+                                <Text style={{color:'#5f5e5c', fontSize:18, marginLeft:-10}}>  160 places</Text>
+                                </View>
+
+                            </TouchableOpacity>
+
+                        </View>
+
+                        <View style={{width:'47%', height:'100%',  alignItems: 'center'}}>
+
+                            <TouchableOpacity style={{width:'100%', height:'100%', justifyContent:'center', alignItems:'center'}}>
+
+                                <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
+                                source={require('../assets/noodles.jpg')} />
+                                
+                                <View style={{marginTop:-1,}}>
+                                <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>Desserts</Text>
+                                <Text style={{color:'#5f5e5c', fontSize:18, marginLeft:-10}}>  160 places</Text>
+                                </View>
+
+                            </TouchableOpacity>
+
+                        </View>
+
+                    </View>
+
+
+
+                    {/* row 3 */}
+
+                    <View style={styles.row}>
+
+                        <View style={{width:'47%', height:'100%',  alignItems: 'center'}}>
+
+                            <TouchableOpacity style={{width:'100%', height:'100%', justifyContent:'center', alignItems:'center'}}>
+
+                                <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
+                                source={require('../assets/noodles.jpg')} />
+                                
+                                <View style={{marginTop:-1,}}>
+                                <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>Desserts</Text>
+                                <Text style={{color:'#5f5e5c', fontSize:18, marginLeft:-10}}>  160 places</Text>
+                                </View>
+
+                            </TouchableOpacity>
+
+                        </View>
+
+                        <View style={{width:'47%', height:'100%',  alignItems: 'center'}}>
+
+                            <TouchableOpacity style={{width:'100%', height:'100%', justifyContent:'center', alignItems:'center'}}>
+
+                                <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
+                                source={require('../assets/noodles.jpg')} />
+                                
+                                <View style={{marginTop:-1,}}>
+                                <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>Desserts</Text>
+                                <Text style={{color:'#5f5e5c', fontSize:18, marginLeft:-10}}>  160 places</Text>
+                                </View>
+
+                            </TouchableOpacity>
+
+                        </View>
+
+                    </View>
+
+
+                    {/* row 4 */}
+
+                    <View style={styles.row}>
+
+                        <View style={{width:'47%', height:'100%',  alignItems: 'center'}}>
+
+                            <TouchableOpacity style={{width:'100%', height:'100%', justifyContent:'center', alignItems:'center'}}>
+
+                                <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
+                                source={require('../assets/noodles.jpg')} />
+                                
+                                <View style={{marginTop:-1,}}>
+                                <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>Desserts</Text>
+                                <Text style={{color:'#5f5e5c', fontSize:18, marginLeft:-10}}>  160 places</Text>
+                                </View>
+
+                            </TouchableOpacity>
+
+                        </View>
+
+                        <View style={{width:'47%', height:'100%',  alignItems: 'center'}}>
+
+                            <TouchableOpacity style={{width:'100%', height:'100%', justifyContent:'center', alignItems:'center'}}>
+
+                                <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
+                                source={require('../assets/noodles.jpg')} />
+                                
+                                <View style={{marginTop:-1,}}>
+                                <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>Desserts</Text>
+                                <Text style={{color:'#5f5e5c', fontSize:18, marginLeft:-10}}>  160 places</Text>
+                                </View>
+
+                            </TouchableOpacity>
+
+                        </View>
+
+                    </View>
+
+                    </ScrollView>
+                    </SafeAreaView>
 
                 </View>
+            
 
-                {/* row 2 */}
-                <View style={{flexDirection:'row', justifyContent:'space-around', height: 170, width:'100%',}}>
-
-                  <View style={{ height: '100%', width:'47%', backgroundColor:'red'}}>
-                    <Text> Sup</Text>
-                  </View>
-
-                  <View style={{ height: '100%', width:'47%', backgroundColor:'blue'}}>
-                    <Text> Sup</Text>
-                  </View>
-
-                </View>
-
-              </View>
+            <View style={styles.tabs}>
               
+              <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', }}
+                onPress={() => navigation.push("Collections", { name: "Collections" })}>
+                <Text style={{fontSize:18, fontWeight: 'bold'}}> LOG IN </Text>
+                <Ionicons name="arrow-forward" size={24} color="black" />
+              </TouchableOpacity>
 
-              </ScrollView>
-              </SafeAreaView>
+            </View>
 
-              </View>
-
-
-          </TouchableOpacity>
-        </View>
-
-
-
-         </ImageBackground>
-
-
-   
+        
        </View>
+
+  
+
   ); 
 }
 
 const styles = StyleSheet.create({
-  bac:{
-    flex:1,
+  main: {
+    flex: 1,
+    // backgroundColor: '#fcaf01',
+    backgroundColor: '#262523',
   },
 
   container: {
@@ -150,37 +239,61 @@ const styles = StyleSheet.create({
   },
 
   scrollView: {
-    backgroundColor: '#fff',
+    backgroundColor: '#262523',
     width:'100%'
   },
 
-  dv1:{
+  main_cont:{
+    flex:1,
+    backgroundColor: '#262523',
+  },
+
+  roller:{
+   flex:1,
+  },
+
+  row:{
+    flexDirection: "row",
+    justifyContent: 'space-around',
     width:'100%',
-    height: '35%',
-    marginTop:25,
-    // backgroundColor:'blue'
+    height: 220,
+    marginBottom:5,
+    
 
   },
 
-  dv2:{
-    width:'100%',
-    height:'70%',
-    // backgroundColor: '#fff'
-  },
-
-  dv2touch:{
+  tabs:{
     width: '100%',
-    height: '100%',
-    borderRadius: 35,
-    backgroundColor: '#fff'
+    height:'10%',
+    position: 'relative',
+    marginBottom:-15,
+    justifyContent:'center', 
+    alignItems:'center', 
+    borderRadius:20,
+    backgroundColor:'#fbf0e9', 
+    flexDirection:'row', 
 
-
-  },
+    
   
-  back:{
-    width:'100%',
-    height:'100%',
-  }
+    
+  },
+
+  image: {
+    flex: 1,
+  },
+
+  textinput:{
+    height: 40,
+    width: '70%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    textAlign: 'center',
+    borderBottomColor: 'grey',
+    borderBottomWidth:1,
+    marginBottom:20,
+  },
+
   
 });
 
