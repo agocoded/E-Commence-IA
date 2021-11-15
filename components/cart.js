@@ -36,8 +36,8 @@ export default function cart({navigation}) {
             <Text style={{fontSize:40, fontWeight:'bold', color:'#1e242c'}}>My Bag</Text>
           </View>
                 
-              {/* The midle compo */}
 
+              {/* The midle compo */}
     
             <ScrollView style={{flex:1, marginTop:15,}}
              showsHorizontalScrollIndicator={false}
