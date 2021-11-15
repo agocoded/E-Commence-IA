@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 
 import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 
 export default function login({navigation}) {
@@ -19,22 +20,17 @@ export default function login({navigation}) {
 
         <SafeAreaView style={styles.main} >
 
-          <ImageBackground source={require('../assets/log.jpg')}
+          <ImageBackground source={require('../assets/login.jpg')}
            resizeMode="cover" style={styles.image}>
 
-            <View style={{marginVertical:150, justifyContent:'center', alignItems:'center',}}>
-              <Text style={{fontSize:17,  color: '#fff'}}>Login Here</Text>
+            <View style={{alignItems:'flex-end', marginTop:10, marginRight:20}}>
+              <FontAwesome name="shopping-bag" size={65} color="#242829" />
+              <Text style={{fontSize:20, fontWeight:'bold', color:'#242829', marginRight:-15}}>BAGGIES </Text>
             </View>
 
-            <View style={{flex:1}}>
+            <View style={{flex:1, justifyContent: 'flex-end', alignItems:'center', marginBottom:30}}>
 
-                <View style={{justifyContent:'center', alignItems:'center', marginBottom:60}}>
-                <Text style={{fontSize:40, fontWeight:'bold', color: '#fff'}}>Ready</Text>
-                <Text style={{fontSize:17,  color: '#fff'}}>for the new taste?!</Text>
-                </View>
-
-
-                <View style={{justifyContent:'center', alignItems:'center', marginBottom:60}}>
+                <View style={{}}>
 
                 <TextInput style={styles.textinput} placeholder='Username' underlineColorAndroid={'transparent'}></TextInput>
                 <TextInput style={styles.textinput} placeholder='Password' underlineColorAndroid={'transparent'} secureTextEntry></TextInput>
@@ -44,15 +40,14 @@ export default function login({navigation}) {
             </View>
             
 
-            <View style={{height:85, width:'100%',justifyContent:'center', alignItems:'center', 
-              borderTopLeftRadius:5, borderTopRightRadius:25 , backgroundColor:'#fbf0e9', flexDirection:'row', justifyContent:'space-around',
-              position: 'relative', backgroundColor:'#fd7768'}}>
+            <View style={{height:'9%', width:'100%', alignItems:'baseline', 
+             flexDirection:'row', justifyContent:'space-around', position: 'relative',}}>
               
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
-                backgroundColor:'#fd7768'}}
-                onPress={() => navigation.push("home", { name: "home" })}>
-                <Text style={{fontSize:18, fontWeight: 'bold', color: '#262523'}}> LOG IN </Text>
-                <Ionicons name="arrow-forward" size={24} color="#262523" />
+               width:'30%', height:45, backgroundColor: '#242829', borderRadius:10,}}
+               onPress={() => navigation.push("Collections", { name: "Collections" })}>
+                <Text style={{fontSize:18, fontWeight: 'bold', color:'#efefef'}}> Go </Text>
+                <Ionicons name="arrow-forward" size={24} color="#efefef" />
               </TouchableOpacity>
 
               

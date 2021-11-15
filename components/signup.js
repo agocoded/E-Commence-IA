@@ -48,7 +48,7 @@ export default function signup({navigation}) {
               
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
                width:'30%', height:45, backgroundColor: '#242829', borderRadius:10,}}
-                onPress={() => navigation.push("home", { name: "home" })}>
+               onPress={() => navigation.push("Collections", { name: "Collections" })}>
                 <Text style={{fontSize:18, fontWeight: 'bold', color:'#efefef'}}> Go </Text>
                 <Ionicons name="arrow-forward" size={24} color="#efefef" />
               </TouchableOpacity>

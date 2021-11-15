@@ -22,18 +22,18 @@ export default function home({navigation}) {
 
           <View style={{width:'100%', marginBottom:5, paddingTop:10, borderBottomLeftRadius:5, borderBottomRightRadius:5,
                 height:'10%', flexDirection:'row', alignItems:'center', justifyContent:'space-between',
-                 backgroundColor:'#262523'}}>
+                 backgroundColor:'#f2f2f2'}}>
             
             <TouchableOpacity >
-            <Ionicons name="chevron-back" size={34} color="#89bc29" 
+            <Ionicons name="chevron-back" size={34} color="#0f5a71" 
                 onPress={() => navigation.push("login", { name: "login" })}
             />
             </TouchableOpacity>
 
-            <Text style={{fontSize:26, fontWeight:'bold', color: '#89bc29'}}>Collections</Text>
+            <Text style={{fontSize:26, fontWeight:'bold', color: '#0f5a71'}}>Collections</Text>
 
             <TouchableOpacity style={{marginRight:18}}>
-            <Ionicons name="fast-food-outline" size={35} color="#89bc29" 
+            <Ionicons name="fast-food-outline" size={35} color="#0f5a71" 
                 onPress={() => navigation.push("login", { name: "login" })} 
             />
             </TouchableOpacity>
@@ -44,7 +44,9 @@ export default function home({navigation}) {
                 {/* The midle compo */}
 
     
-            <ScrollView style={styles.scrollView}>
+            <ScrollView style={styles.scrollView}
+            showsHorizontalScrollIndicator={false}
+             showsVerticalScrollIndicator={false}>
 
             
                     {/* Horizontal lane */}
@@ -54,15 +56,15 @@ export default function home({navigation}) {
                     <View style={{width:'100%', alignItems: 'center'}}>
 
                         <TouchableOpacity style={{width:'100%',  justifyContent:'center', alignItems:'center'}}
-                            onPress={() => navigation.push("Collections", { name: "Collections" })}>
+                            onPress={() => navigation.push("home", { name: "home" })}>
 
                             <ImageBackground
                                 style={styles.image}
                                 imageStyle={{ borderRadius: 10}}
-                                source={require('../assets/noodles.jpg')} >
+                                source={require('../assets/bags.jpg')} >
 
-                                <View style={{marginTop:100,}}>
-                                <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}> Noodles</Text>
+                                <View style={{justifyContent:'flex-end', marginLeft:10 }}>
+                                <Text style={{color:'#f9f9f9', fontSize:37,fontWeight: 'bold' }}>Totes</Text>
                                 
                                 </View>
 
@@ -82,13 +84,13 @@ export default function home({navigation}) {
                     <View style={{width:'47%',   alignItems: 'center'}}>
 
                         <TouchableOpacity style={{width:'100%', height:220, justifyContent:'center', alignItems:'center'}}
-                            onPress={() => navigation.push("Collections", { name: "Collections" })}>
+                            onPress={() => navigation.push("home", { name: "home" })}>
 
                             <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
-                            source={require('../assets/fufu1.jpg')} />
+                            source={require('../assets/satchel.png')} />
                             
                             <View style={{marginTop:-1,}}>
-                            <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>African Dishes</Text>
+                            <Text style={{color:'#0f5a71', fontSize:22,fontWeight: 'bold' }}>Satchel</Text>
                             
                             </View>
 
@@ -101,13 +103,13 @@ export default function home({navigation}) {
                     <View style={{width:'47%',   alignItems: 'center'}}>
 
                         <TouchableOpacity style={{width:'100%', height:220, justifyContent:'center', alignItems:'center'}}
-                            onPress={() => navigation.push("Collections", { name: "Collections" })}>
+                            onPress={() => navigation.push("home", { name: "home" })}>
 
                             <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
-                            source={require('../assets/palm1.jpg')} />
+                            source={require('../assets/backpack.png')} />
                             
                             <View style={{marginTop:-1,}}>
-                            <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>Local Drinks</Text>
+                            <Text style={{color:'#0f5a71', fontSize:22,fontWeight: 'bold' }}>Backpack</Text>
                             
                             </View>
 
@@ -125,13 +127,13 @@ export default function home({navigation}) {
                     <View style={{width:'47%',  alignItems: 'center'}}>
 
                         <TouchableOpacity style={{width:'100%', height: 220, justifyContent:'center', alignItems:'center'}}
-                            onPress={() => navigation.push("Collections", { name: "Collections" })}>
+                            onPress={() => navigation.push("home", { name: "home" })}>
 
                             <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
-                            source={require('../assets/dessert1.jpg')} />
+                            source={require('../assets/backpack.png')} />
                             
                             <View style={{marginTop:-1,}}>
-                            <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>Desserts</Text>
+                            <Text style={{color:'#0f5a71', fontSize:22,fontWeight: 'bold' }}>Crossbody</Text>
                             
                             </View>
 
@@ -144,13 +146,13 @@ export default function home({navigation}) {
                     <View style={{width:'47%', alignItems: 'center'}}>
 
                         <TouchableOpacity style={{width:'100%',  height:220, justifyContent:'center', alignItems:'center'}}
-                            onPress={() => navigation.push("Collections", { name: "Collections" })}>
+                            onPress={() => navigation.push("home", { name: "home" })}>
 
                             <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
-                            source={require('../assets/burgar1.jpg')} />
+                            source={require('../assets/bag2.png')} />
                             
                             <View style={{marginTop:-1,}}>
-                            <Text style={{color:'#f9f9f9', fontSize:22,fontWeight: 'bold' }}>Burgars</Text>
+                            <Text style={{color:'#0f5a71', fontSize:22,fontWeight: 'bold' }}>Baguette</Text>
 
                             </View>
 
@@ -160,6 +162,11 @@ export default function home({navigation}) {
 
                 </View>
 
+
+
+                {/* Testing Row */}
+                
+
             </ScrollView>
 
             
@@ -167,27 +174,27 @@ export default function home({navigation}) {
             <View style={styles.tabs}>
               
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
-                backgroundColor:'#89bc29', }}
-                onPress={() => navigation.push("home", { name: "home" })}>
-                <Ionicons name="ios-home-outline" size={35} color="#262523" />
+                 }}
+                 onPress={() => navigation.push("Collections", { name: "Collections" })}>
+                <Ionicons name="ios-home-outline" size={35} color="#0f5a71" />
               </TouchableOpacity>
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
-                backgroundColor:'#89bc29' }}
+                 }}
                 onPress={() => navigation.push("Collections", { name: "Collections" })}>
-                <MaterialCommunityIcons name="food-fork-drink" size={39} color="#262523" />
+                <MaterialCommunityIcons name="food-fork-drink" size={39} color="#0f5a71" />
               </TouchableOpacity>
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
-                backgroundColor:'#89bc29'}}
+                }}
                 onPress={() => navigation.push("cart", { name: "cart" })}>
-                <Ionicons name="cart-outline" size={39} color="#262523" />
+                <Ionicons name="cart-outline" size={39} color="#0f5a71" />
               </TouchableOpacity>
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
-                backgroundColor:'#89bc29'}}
+                }}
                 onPress={() => navigation.push("home", { name: "home" })}>
-                <AntDesign name="profile" size={36} color="#262523" />
+                <AntDesign name="profile" size={36} color="#0f5a71" />
               </TouchableOpacity>
 
             </View>
@@ -203,13 +210,13 @@ const styles = StyleSheet.create({
 
   main_cont:{
     flex:1,
-    backgroundColor: '#262523',
+    backgroundColor: '#f2f2f2',
     },
 
 
   scrollView: {
     flex:1,
-    backgroundColor: '#262523',
+    backgroundColor: '#f2f2f2',
     width:'100%'
   },
 
@@ -222,7 +229,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: 'space-around',
     width:'100%',
-    marginBottom:7,
+  
     
 
   },
@@ -236,12 +243,13 @@ const styles = StyleSheet.create({
   tabs:{
     flexDirection: 'row',
     width: '100%',
-    height:'9%',
+    height: 60,
     position: 'relative',
     justifyContent: 'space-around',
     alignItems:'center', 
-    borderRadius:7,
-    backgroundColor:'#89bc29', 
+    borderTopLeftRadius:7,
+    borderTopRightRadius:7,
+    backgroundColor:'#fcce82', 
    
  
   },
