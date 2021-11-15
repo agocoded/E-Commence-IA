@@ -6,6 +6,7 @@ import {
   StyleSheet, 
   Text, 
   TextInput,
+  SafeAreaView,
   View, 
   TouchableOpacity
 } from 'react-native';
@@ -16,7 +17,7 @@ import { Ionicons } from '@expo/vector-icons';
 export default function login({navigation}) {
   return (
 
-       <View style={styles.main} >
+        <SafeAreaView style={styles.main} >
 
           <ImageBackground source={require('../assets/log.jpg')}
            resizeMode="cover" style={styles.image}>
@@ -36,7 +37,7 @@ export default function login({navigation}) {
                 <View style={{justifyContent:'center', alignItems:'center', marginBottom:60}}>
 
                 <TextInput style={styles.textinput} placeholder='Username' underlineColorAndroid={'transparent'}></TextInput>
-                <TextInput style={styles.textinput} placeholder='Password' underlineColorAndroid={'transparent'}></TextInput>
+                <TextInput style={styles.textinput} placeholder='Password' underlineColorAndroid={'transparent'} secureTextEntry></TextInput>
         
                 </View>
 
@@ -44,7 +45,7 @@ export default function login({navigation}) {
             
 
             <View style={{height:85, width:'100%',justifyContent:'center', alignItems:'center', 
-              borderRadius:9, backgroundColor:'#fbf0e9', flexDirection:'row', justifyContent:'space-around',
+              borderTopLeftRadius:5, borderTopRightRadius:25 , backgroundColor:'#fbf0e9', flexDirection:'row', justifyContent:'space-around',
               position: 'relative', backgroundColor:'#fd7768'}}>
               
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
@@ -59,7 +60,9 @@ export default function login({navigation}) {
 
           </ImageBackground>
         
-       </View>
+ 
+      </SafeAreaView>
+
 
   
 

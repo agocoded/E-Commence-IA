@@ -1,37 +1,36 @@
 
 import React from 'react';
 import { 
-  ImageBackground,
-  Image, 
+  ImageBackground, 
   StyleSheet, 
   Text, 
+  SafeAreaView,
   TextInput,
   View, 
   TouchableOpacity
 } from 'react-native';
 
 import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 
 export default function signup({navigation}) {
   return (
 
-       <View style={styles.main} >
 
-          <ImageBackground source={require('../assets/log.jpg')}
+
+        <SafeAreaView style={styles.main}>
+
+
+          <ImageBackground source={require('../assets/signup.jpg')}
            resizeMode="cover" style={styles.image}>
 
-            <View style={{marginVertical:150, justifyContent:'center', alignItems:'center',}}>
-              <Text style={{fontSize:17, color: '#fff',}} >Signup Here</Text>
+            <View style={{alignItems:'flex-end', marginTop:10, marginRight:20}}>
+            <FontAwesome name="shopping-bag" size={65} color="#242829" />
+            <Text style={{fontSize:20, fontWeight:'bold', color:'#242829', marginRight:-15}}>BAGGIES </Text>
             </View>
 
-            <View style={{flex:1}}>
-
-                <View style={{justifyContent:'center', alignItems:'center', marginBottom:60}}>
-                <Text style={{fontSize:40, fontWeight:'bold', color: '#fff',}}>Join Us</Text>
-                <Text style={{fontSize:17, color: '#fff',}}>Today</Text>
-                </View>
-
+            <View style={styles.start}>
 
                 <View style={{justifyContent:'center', alignItems:'center', marginBottom:60}}>
 
@@ -39,30 +38,27 @@ export default function signup({navigation}) {
                 <TextInput style={styles.textinput} placeholder='Email' underlineColorAndroid={'transparent'}></TextInput>
                 <TextInput style={styles.textinput} placeholder='Password' underlineColorAndroid={'transparent'}></TextInput>
                 <TextInput style={styles.textinput} placeholder='Confirm Password' underlineColorAndroid={'transparent'}></TextInput>
-        
-                
 
                 </View>
 
             </View>
 
-            <View style={{height:85, width:'100%',justifyContent:'center', alignItems:'center', 
-              borderRadius:20, backgroundColor:'#fbf0e9', flexDirection:'row', justifyContent:'space-around',
-              backgroundColor:'#fd7768',position: 'relative',}}>
+            <View style={{height:'9%', width:'100%', alignItems:'baseline', 
+             flexDirection:'row', justifyContent:'space-around', position: 'relative',}}>
               
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
-                backgroundColor:'#fd7768'}}
+               width:'30%', height:45, backgroundColor: '#242829', borderRadius:10,}}
                 onPress={() => navigation.push("home", { name: "home" })}>
-                <Text style={{fontSize:18, fontWeight: 'bold', color:'262523'}}> Go </Text>
-                <Ionicons name="arrow-forward" size={24} color="#262523" />
+                <Text style={{fontSize:18, fontWeight: 'bold', color:'#efefef'}}> Go </Text>
+                <Ionicons name="arrow-forward" size={24} color="#efefef" />
               </TouchableOpacity>
 
               
             </View>
 
           </ImageBackground>
-        
-       </View>
+
+        </SafeAreaView>
 
   
 
@@ -83,7 +79,7 @@ const styles = StyleSheet.create({
     height: 30,
     width: '70%',
     justifyContent: 'center',
-    color: '#fff',
+    color: '#242829',
     alignItems: 'center',
     alignSelf: 'center',
     textAlign: 'center',
@@ -91,6 +87,15 @@ const styles = StyleSheet.create({
     borderBottomWidth:1,
     marginBottom:20,
   },
+
+  start:{
+    flex:1,
+    justifyContent:'flex-end',
+    marginBottom: -40,
+    
+ 
+
+  }
 
 });
 
