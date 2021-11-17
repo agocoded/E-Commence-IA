@@ -95,8 +95,8 @@ export default function afri({navigation}) {
                     
                         <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
                         width:'65%', height:50, backgroundColor: '#fcce82', borderRadius:10, }}
-                        onPress={() => navigation.push("Collections", { name: "Collections" })}>
-                            <Text style={{fontSize:18, fontWeight: 'bold', color:'#efefef'}}> Ad to Bag </Text>
+                        onPress={() => navigation.push("cart", { name: "cart" })}>
+                            <Text style={{fontSize:18, fontWeight: 'bold', color:'#efefef'}}> Add to Bag </Text>
                             <Ionicons name="arrow-forward" size={24} color="#efefef" />
                         </TouchableOpacity>
 
@@ -136,7 +136,7 @@ export default function afri({navigation}) {
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
                 }}
-                onPress={() => navigation.push("home", { name: "home" })}>
+                onPress={() => navigation.push("checkout", { name: "checkout" })}>
                 <AntDesign name="profile" size={36} color="#0f5a71" />
               </TouchableOpacity>
 

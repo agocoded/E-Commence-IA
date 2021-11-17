@@ -239,7 +239,7 @@ export default function home({navigation}) {
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
                 }}
-                onPress={() => navigation.push("home", { name: "home" })}>
+                onPress={() => navigation.push("checkout", { name: "checkout" })}>
                 <AntDesign name="profile" size={36} color="#0f5a71" />
               </TouchableOpacity>
 

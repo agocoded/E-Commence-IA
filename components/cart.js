@@ -201,11 +201,14 @@ export default function cart({navigation}) {
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
                width:'60%', height:60, backgroundColor: '#0f5a71', borderRadius:10,}}
-               onPress={() => navigation.push("Collections", { name: "Collections" })}>
+               onPress={() => navigation.push("checkout", { name: "checkout" })}>
                 <Text style={{fontSize:23, fontWeight: 'bold', color:'#efefef'}}> Checkout </Text>
               </TouchableOpacity>
               
+
             </View>
+
+           
               
             
 
@@ -237,7 +240,7 @@ export default function cart({navigation}) {
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
                 }}
-                onPress={() => navigation.push("home", { name: "home" })}>
+                onPress={() => navigation.push("checkout", { name: "checkout" })}>
                 <AntDesign name="profile" size={36} color="#0f5a71" />
               </TouchableOpacity>
 

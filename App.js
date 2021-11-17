@@ -10,6 +10,7 @@ import cart from './components/cart';
 import login from './components/login';
 import signup from './components/signup';
 import home from './components/home';
+import checkout from './components/checkout';
 
 const Stack = createStackNavigator();
 
@@ -61,6 +62,12 @@ export default function App() {
       name="cart"
       component={cart}
       // options={{ title: "African Dishes " }}
+      options={{ title: "" },{header: () => null}}
+      />
+
+      <Stack.Screen
+      name="checkout"
+      component={checkout}
       options={{ title: "" },{header: () => null}}
       />
 
