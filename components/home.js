@@ -14,7 +14,6 @@ import {
 
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 
@@ -45,27 +44,46 @@ export default function home({navigation}) {
             
           </View>
 
+          
 
-          <View style={{flexDirection:'row', justifyContent: 'space-around', height:40, width:'100%', marginTop:13}}>
-
-              <TouchableOpacity style={{width:60, backgroundColor:'#0f5a71', borderRadius:12,
-              justifyContent:'center', alignItems:'center'}}>
-                <Text style={{fontSize:20, fontWeight:'bold', color:'#fefefe'}}>Tote</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={{justifyContent:'center', alignItems:'center'}}>
-                <Text style={{fontSize:20, fontWeight:'bold', color:'#0f5a71'}}>Crossbody</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={{justifyContent:'center', alignItems:'center'}}>
-                <Text style={{fontSize:20, fontWeight:'bold', color:'#0f5a71'}}>Clutch</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={{justifyContent:'center', alignItems:'center'}}>
-                <Text style={{fontSize:20, fontWeight:'bold', color:'#0f5a71'}}>Duffle</Text>
-              </TouchableOpacity>
+          <View style={{justifyContent: 'space-around', marginTop:13}}>
 
 
+            <ScrollView  style={{}}
+              showsHorizontalScrollIndicator={false}
+              horizontal={true}>
+
+              
+                <TouchableOpacity style={{marginHorizontal:10 ,backgroundColor:'#0f5a71', borderRadius:12,
+                justifyContent:'center', alignItems:'center'}}>
+                  <Text style={{fontSize:20, fontWeight:'bold', color:'#fefefe', paddingVertical:6, paddingHorizontal:8}}>Tote</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={{justifyContent:'center', marginHorizontal:10 , alignItems:'center'}}>
+                  <Text style={{fontSize:20, fontWeight:'bold', color:'#0f5a71'}}>Crossbody</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={{justifyContent:'center', marginHorizontal:10 , alignItems:'center'}}>
+                  <Text style={{fontSize:20, fontWeight:'bold', color:'#fcce82'}}>Clutch</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={{justifyContent:'center', marginHorizontal:10 , alignItems:'center'}}>
+                  <Text style={{fontSize:20, fontWeight:'bold', color:'#0f5a71'}}>Duffle</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={{justifyContent:'center', marginHorizontal:10 , alignItems:'center'}}>
+                  <Text style={{fontSize:20, fontWeight:'bold', color:'#fcce82'}}>Handbag</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={{justifyContent:'center', marginHorizontal:10 , alignItems:'center'}}>
+                  <Text style={{fontSize:20, fontWeight:'bold', color:'#0f5a71'}}>Sideways</Text>
+                </TouchableOpacity>
+
+            
+
+
+
+            </ScrollView>
           </View>
           
                 
@@ -82,12 +100,12 @@ export default function home({navigation}) {
                 alignItems:'center', backgroundColor:'#fefefe', borderRadius:20}}>
 
                   <TouchableOpacity style={{width: '45%', height:'90%', backgroundColor:'#f2f2f2', borderRadius:20}}
-                  onPress={() => navigation.push("cart", { name: "cart" })}>
+                  onPress={() => navigation.push("afri", { name: "afri" })}>
 
                     <ImageBackground source={require('../assets/bag1.png')}
                       resizeMode="cover" style={{flex:1, alignItems:'flex-end', margin:8}}>
 
-                      <Entypo name="heart" size={30} color="#ffcccc" />
+                      <Entypo name="heart" size={30} color="#fcce82" />
 
                     </ImageBackground>
 
@@ -108,7 +126,7 @@ export default function home({navigation}) {
 
                       <TouchableOpacity style={{width:'40%', height:35,backgroundColor:'#0f5a71', alignItems:'center', justifyContent:'center',
                       borderRadius:10}} onPress={() => navigation.push("cart", { name: "cart" })}>
-                        <Text style={{fontWeight:'bold', fontSize:18,  color:'#fefefe'}}>Buy</Text>
+                        <Text style={{fontWeight:'bold', fontSize:18,  color:'#fcce82'}}>Buy</Text>
                       </TouchableOpacity>
 
                     </View>
@@ -126,12 +144,12 @@ export default function home({navigation}) {
                 alignItems:'center', backgroundColor:'#fefefe', borderRadius:20}}>
 
                   <TouchableOpacity style={{width: '45%', height:'90%', backgroundColor:'#f2f2f2', borderRadius:20}}
-                  onPress={() => navigation.push("cart", { name: "cart" })}>
+                  onPress={() => navigation.push("afri", { name: "afri" })}>
 
                   <ImageBackground source={require('../assets/bag2.png')}
                       resizeMode="cover" style={{flex:1, alignItems:'flex-end', margin:8}}>
 
-                      <Entypo name="heart" size={30} color="#ffcccc" />
+                      <Entypo name="heart" size={30} color="#fcce82" />
 
                     </ImageBackground>
 
@@ -152,7 +170,7 @@ export default function home({navigation}) {
 
                       <TouchableOpacity style={{width:'40%', height:35,backgroundColor:'#0f5a71', alignItems:'center', justifyContent:'center',
                       borderRadius:10}} onPress={() => navigation.push("cart", { name: "cart" })}>
-                        <Text style={{fontWeight:'bold', fontSize:18,  color:'#fefefe'}}>Buy</Text>
+                        <Text style={{fontWeight:'bold', fontSize:18,  color:'#fcce82'}}>Buy</Text>
                       </TouchableOpacity>
 
                     </View>
@@ -170,15 +188,15 @@ export default function home({navigation}) {
             <View style={styles.tabs}>
               
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
-                }}
-                onPress={() => navigation.push("Collections", { name: "Collections" })}>
+                 }}
+                 onPress={() => navigation.push("Collections", { name: "Collections" })}>
                 <Ionicons name="ios-home-outline" size={35} color="#0f5a71" />
               </TouchableOpacity>
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
-                }}
-                onPress={() => navigation.push("Collections", { name: "Collections" })}>
-                <MaterialCommunityIcons name="food-fork-drink" size={39} color="#0f5a71" />
+                 }}
+                onPress={() => navigation.push("home", { name: "home" })}>
+                <FontAwesome name="shopping-bag" size={35} color="#0f5a71" />
               </TouchableOpacity>
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
@@ -188,7 +206,13 @@ export default function home({navigation}) {
               </TouchableOpacity>
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
-              }}
+                }}
+                onPress={() => navigation.push("afri", { name: "afri" })}>
+               <FontAwesome name="cc-mastercard" size={35} color="#0f5a71" />
+              </TouchableOpacity>
+
+              <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
+                }}
                 onPress={() => navigation.push("home", { name: "home" })}>
                 <AntDesign name="profile" size={36} color="#0f5a71" />
               </TouchableOpacity>
@@ -230,12 +254,13 @@ const styles = StyleSheet.create({
   tabs:{
     flexDirection: 'row',
     width: '100%',
-    height:60,
+    height: 60,
+    position: 'relative',
     justifyContent: 'space-around',
     alignItems:'center', 
-    borderTopLeftRadius:10,
-    borderTopRightRadius:10,
-    backgroundColor:'#fcce82', 
+    borderTopLeftRadius:7,
+    borderTopRightRadius:7,
+    backgroundColor:'#fcce82',
    
  
   },

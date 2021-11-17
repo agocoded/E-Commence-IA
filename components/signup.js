@@ -86,6 +86,8 @@ const styles = StyleSheet.create({
     borderBottomColor: 'grey',
     borderBottomWidth:1,
     marginBottom:20,
+    fontWeight:'500',
+    fontSize:17,
   },
 
   start:{

@@ -1,225 +1,190 @@
 
 import React from 'react';
-import { ImageBackground, Image,  SafeAreaView, ScrollView, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import { 
+  Image, 
+  ImageBackground,
+  StyleSheet, 
+  Text, 
+  TextInput,
+  SafeAreaView, 
+  ScrollView, 
+  View, 
+  TouchableOpacity
+} from 'react-native';
 
-import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 
 export default function afri({navigation}) {
   return (
-       <View style={styles.bac} >
+        <SafeAreaView style={styles.main_cont}>
 
-         <ImageBackground source={require('../assets/afrima.png')} style={styles.back}
-         blurRadius={1.5} >
+            <View style={{width:'100%', height:'45%', backgroundColor:'#e3e5e8', borderBottomLeftRadius:25,
+            borderBottomRightRadius:25,
+            }}>
 
-        <View style={styles.dv1}>
+                <View style={{flexDirection:'row', justifyContent:'space-between', marginHorizontal:7, marginTop:5}}>
 
-          <View style={{width:'100%', height:'15%', flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginHorizontal:10}}>
+                    <TouchableOpacity>
+                    <MaterialIcons name="forward-to-inbox" size={35} color="#0f5a71" />
+                    </TouchableOpacity>
 
-            <TouchableOpacity >
-             <Ionicons name="chevron-back" size={34} color="black" 
-                onPress={() => navigation.push("Collections", { name: "Collections" })}
-             />
-            </TouchableOpacity>
+                    <TouchableOpacity>
+                    <AntDesign name="menu-fold" size={30} color="#0f5a71" />
+                    </TouchableOpacity>
 
-            <TouchableOpacity style={{marginRight:18}}>
-              <FontAwesome name="heart" size={29} color="#08003d" />
-            </TouchableOpacity>
-           
-          </View>
+                </View>
+                
+                <View style={{width:'100%', height:'85%', justifyContent:'center', alignItems:'center', 
+                }}>
+                <Image
+                    style={{width:'60%', height:'100%', marginTop:-10}}
+                    source={require('../assets/des.png')}
+                />
+                </View>
+                
 
-            {/* screen 2 */}
-          <View style={{marginLeft:20, marginTop:5}}  >
-            <Text style={{fontSize: 37, color:'#fff'}}> African Dishes </Text>
-            <Text style={{fontSize: 18, color:'#fff', marginLeft:20}}> 03 Jamaican Street apt77</Text>
-          </View>
+                <View style={{width:'100', height:50, alignItems:'flex-end', marginRight:30, borderRadius:15, }}>
+                <TouchableOpacity style={{ backgroundColor:'white' ,width:50, height:50, justifyContent:'center',
+                alignItems:'center', borderRadius:10}}>
 
-          {/* screen 3 */}
-          <View style={{flex:1, flexDirection: 'row', justifyContent: 'space-around', marginTop:4}}>
+                    <FontAwesome name="heart" size={29} color="#fcce82" />
+
+                </TouchableOpacity>
+                </View>
+
+            </View>
+
+            <View style={{flex:1}}>
+
+                    <View style={{marginLeft:10, marginTop:5}}>
+                        <Text style={{fontSize:33, fontWeight:'bold', color:'#0f5a71'}}>Back Pack</Text>
+                        <Text style={{fontSize:22, fontWeight:'200', marginTop:-5, marginBottom:10 ,color:'#9097a2'}}>unisex</Text>
+                    </View>
+                    
+                    <View style={{width:'100%', height:40, flexDirection:'row', justifyContent:'space-around',
+                    marginBottom:5}}>
+                        <Text style={{fontSize:25, fontWeight:'bold', color:'#fcce82'}}>
+                         15.99$
+                        </Text>
+
+                        <TouchableOpacity style={{backgroundColor:'#0f5a71', borderRadius:15, width:80,
+                        justifyContent:'center', alignItems:'center', flexDirection:'row'}}>
+                            <Text style={{fontSize:28, fontWeight:'bold', color:'#fcce82'}}> - </Text>
+                            <Text style={{fontSize:25, fontWeight:'bold', color:'#fcce82'}}> 1 </Text>
+                            <Text style={{fontSize:28, fontWeight:'bold', color:'#fcce82'}}> + </Text>
+                           
+                        </TouchableOpacity>
+                    </View>
+
+                    <Text style={{fontWeight:'600', fontSize:25 , marginBottom:2.5, color:'#0f5a71'}}> About Product</Text>
+
+                    <Text style={{fontWeight:'300', fontSize:16, marginBottom:20, marginHorizontal:2,
+                     color:'#8c8c8c'}}>
+                        A backpack is a small bag that women and some men may carry around with them. 
+                        A backpack is a bag that is carried on the shoulder or originally in the hand (hence backpack). 
+                        There are so many types of these bags now from modern ones to plain ones etc. 
+                        A backpack usually contains women's make-up, files, diaries etc.
+                    </Text>
+
+                    <View style={{height:'9%', width:'100%', alignItems:'center', 
+                    flexDirection:'row', justifyContent:'center', position: 'relative',}}>
+                    
+                        <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
+                        width:'65%', height:50, backgroundColor: '#fcce82', borderRadius:10, }}
+                        onPress={() => navigation.push("Collections", { name: "Collections" })}>
+                            <Text style={{fontSize:18, fontWeight: 'bold', color:'#efefef'}}> Ad to Bag </Text>
+                            <Ionicons name="arrow-forward" size={24} color="#efefef" />
+                        </TouchableOpacity>
+
+              
+                    </View>
+
+                
+            </View>
+
             
-            <View> 
-              <Text style={{fontSize: 25, color:'#fff', fontWeight: 'bold'}}> 4.5 </Text>
-              <Text style={{fontSize: 16, color:'#08003d', fontWeight: 'bold' }}> Ratings</Text>
-            </View>
 
-            <View> 
-              <Text style={{fontSize: 25, color:'#fff'}}> 137K  </Text>
-              <Text style={{fontSize: 16, color:'#08003d', fontWeight: 'bold'}}>Bookmarks </Text>
-            </View>
-
-            <View>
-              <Text style={{fontSize: 25, color:'#fff', fontWeight: 'bold'}}> 246 </Text>
-              <Text style={{fontSize: 16, color:'#08003d', fontWeight: 'bold'}}> Photos </Text>
-            </View>
-
-          </View>
-
-          {/* screen 4 */}
-          <View style={{flex:1, flexDirection: 'row', justifyContent: 'space-between', marginHorizontal:10, }}>
-
-          <View style={{width: '70%',}}> 
-              <Text style={{fontSize: 16, color:'#08003d', }}>Pickup on your time. Your order is  </Text>
-              <Text style={{fontSize: 16, color:'#08003d',}}>ready when you are </Text>
-            </View>
-
-            <View style={{width: '30%', height: 33, marginTop:9, }}>
-              <TouchableOpacity style={{backgroundColor:'#fcaf01', borderRadius:10, height: 33,  justifyContent:'center', alignItems:'center'}}
-                onPress={() => navigation.push("cart", { name: "cart" })}>
-                <Text style={{ fontWeight: 'bold', fontSize: 17, color:'#08003d',}}> Order Now</Text>
+            <View style={styles.tabs}>
+              
+              <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
+                 }}
+                 onPress={() => navigation.push("Collections", { name: "Collections" })}>
+                <Ionicons name="ios-home-outline" size={35} color="#0f5a71" />
               </TouchableOpacity>
-            </View>
-            
-          </View>
 
-        </View>
+              <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
+                 }}
+                onPress={() => navigation.push("home", { name: "home" })}>
+                <FontAwesome name="shopping-bag" size={35} color="#0f5a71" />
+              </TouchableOpacity>
 
+              <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
+                }}
+                onPress={() => navigation.push("cart", { name: "cart" })}>
+                <Ionicons name="cart-outline" size={39} color="#0f5a71" />
+              </TouchableOpacity>
 
+              <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
+                }}
+                onPress={() => navigation.push("afri", { name: "afri" })}>
+               <FontAwesome name="cc-mastercard" size={35} color="#0f5a71" />
+              </TouchableOpacity>
 
-        {/* div 2 */}
-        <View style={styles.dv2}>
-          
-          {/* overall container */}
-          <View style={{flex:1}}>
-
-              <View style={{ marginBottom:7 ,width: '100%', height:'7%', justifyContent:'center', alignItems:'center',}}>
-                  <Text style={{ fontSize:15, fontWeight:'bold', color: '#08003d'}}>Featured Items</Text>
-              </View>
-
-
-            {/* Second row */}
-            {/* added a scrollview to guide the height cos different screens */}
-
-
-              {/* row 1 */}
-              <View style={{marginBottom:5 ,flexDirection:'row', justifyContent:'space-around', height: 180, width:'100%',}}> 
-
-                <View style={styles.button}>
-
-                  <TouchableOpacity style={{ alignItems:'center', marginTop:5, }} >
-                    <Image source={require('../assets/fufu.jpg')}  style={{width:100,
-                    height:100  ,  borderRadius:5, marginBottom:5}}/>
-
-                  <Text style={{fontWeight:'bold', fontSize:19 , color:'#08003d'}}> Fufu </Text>
-                  <Text style={{fontSize:15, color:'#08003d'}}> with meat or fish</Text>
-                  <Text style={{fontWeight:'bold', fontSize:16, color:'#08003d'}}> $50.00 </Text>
-                  
-                  </TouchableOpacity>
-
-                </View>
-
-                      {/* other side */}
-                <View style={styles.button}>
-
-                  <TouchableOpacity style={{ alignItems:'center', marginTop:5, }} >
-                    <Image source={require('../assets/fufu.jpg')}  style={{width:100,
-                    height:100  ,  borderRadius:5, marginBottom:5}}/>
-
-                  <Text style={{fontWeight:'bold', fontSize:19 , color:'#08003d'}}> Fufu </Text>
-                  <Text style={{fontSize:15, color:'#08003d'}}> with meat or fish</Text>
-                  <Text style={{fontWeight:'bold', fontSize:16, color:'#08003d'}}> $50.00 </Text>
-                  
-                  </TouchableOpacity>
-
-                </View>
-
-              </View>
-
-              {/* row 2 */}
-              <View style={{marginBottom:1 ,flexDirection:'row', justifyContent:'space-around', height: 180, width:'100%',}}> 
-
-                <View style={styles.button}>
-
-                  <TouchableOpacity style={{ alignItems:'center', marginTop:5, }} >
-                    <Image source={require('../assets/fufu.jpg')}  style={{width:100,
-                    height:100  ,  borderRadius:5, marginBottom:5}}/>
-
-                  <Text style={{fontWeight:'bold', fontSize:19 , color:'#08003d'}}> Fufu </Text>
-                  <Text style={{fontSize:15, color:'#08003d'}}> with meat or fish</Text>
-                  <Text style={{fontWeight:'bold', fontSize:16, color:'#08003d'}}> $50.00 </Text>
-                  
-                  </TouchableOpacity>
-
-                </View>
-
-                      {/* other side */}
-                <View style={styles.button}>
-
-                  <TouchableOpacity style={{ alignItems:'center', marginTop:5, }} >
-                    <Image source={require('../assets/fufu.jpg')}  style={{width:100,
-                    height:100  ,  borderRadius:5, marginBottom:5}}/>
-
-                  <Text style={{fontWeight:'bold', fontSize:19 , color:'#08003d'}}> Fufu </Text>
-                  <Text style={{fontSize:15, color:'#08003d'}}> with meat or fish</Text>
-                  <Text style={{fontWeight:'bold', fontSize:16, color:'#08003d'}}> $50.00 </Text>
-                  
-                  </TouchableOpacity>
-
-                </View>
-
-              </View>
-
+              <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
+                }}
+                onPress={() => navigation.push("home", { name: "home" })}>
+                <AntDesign name="profile" size={36} color="#0f5a71" />
+              </TouchableOpacity>
 
             </View>
 
-        </View>
+ 
 
+        </SafeAreaView>
 
+  
 
-         </ImageBackground>
-
-
-   
-       </View>
   ); 
 }
 
 const styles = StyleSheet.create({
-  bac:{
+
+  main_cont:{
     flex:1,
-  },
+    backgroundColor:'#fff',
+    },
 
-  container: {
-    flex: 1,
-  },
-
-  scrollView: {
-    backgroundColor: '#fff',
-    width:'100%'
-  },
-
-  dv1:{
+  row:{
+    flexDirection: "row",
+    justifyContent: 'space-around',
     width:'100%',
-    height: '35%',
-    marginTop:25,
-    // backgroundColor:'blue'
+    marginBottom:7,
+    
 
   },
 
-  dv2:{
+  image: {
     width:'100%',
-    height:'70%',
-    backgroundColor: '#fff',
-    borderRadius:35
-
+    height:220,
+    marginBottom:7,
   },
 
- button:{
-    height: '100%',
-    width:'45%',
-    shadowColor: 'rgba(0,0,0, .4)', // IOS
-    shadowOffset: { height: 3, width: 3 }, // IOS
-    shadowOpacity: 5, // IOS
-    shadowRadius: 10, //IOS
-    borderRadius:10,
-    elevation: 2, // Android
-  
- },
-  
-  back:{
-    width:'100%',
-    height:'100%',
-  }
+  tabs:{
+    flexDirection: 'row',
+    width: '100%',
+    height: 60,
+    position: 'relative',
+    justifyContent: 'space-around',
+    alignItems:'center', 
+    borderTopLeftRadius:7,
+    borderTopRightRadius:7,
+    backgroundColor:'#fcce82',
+ 
+  },
   
 });
 

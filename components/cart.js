@@ -14,7 +14,6 @@ import {
 
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 
@@ -26,9 +25,9 @@ export default function cart({navigation}) {
           <View style={{flexDirection:'row', marginTop:10 , justifyContent:'flex-end',
            alignItems:'center', width:'100%', height:50, }}>
 
-            <TouchableOpacity><FontAwesome name="search" size={40} color="#1e242c"  style={{ marginRight:15}} /></TouchableOpacity>
+            <TouchableOpacity><FontAwesome name="search" size={40} color="#0f5a71"  style={{ marginRight:15}} /></TouchableOpacity>
 
-            <TouchableOpacity><Ionicons name="notifications-outline" size={45} color="#1e242c" /></TouchableOpacity>
+            <TouchableOpacity><Ionicons name="notifications-outline" size={45} color="#0f5a71" /></TouchableOpacity>
           
           </View>
 
@@ -53,7 +52,7 @@ export default function cart({navigation}) {
                     <ImageBackground source={require('../assets/bag1.png')}
                       resizeMode="cover" style={{flex:1, alignItems:'flex-end', margin:8}}>
 
-                      <Entypo name="heart" size={30} color="#ffcccc" />
+                      <Entypo name="heart" size={30} color="#fff" />
 
                     </ImageBackground>
 
@@ -70,16 +69,16 @@ export default function cart({navigation}) {
 
                       <TouchableOpacity style={{width:'38%', height:35,backgroundColor:'#eaece9', alignItems:'center', justifyContent:'center',
                       borderRadius:10}}>
-                        <Ionicons name="ios-remove-circle-sharp" size={32} color="1e242c" />
+                        <Ionicons name="ios-remove-circle-sharp" size={32} color="#fcce82" />
                       </TouchableOpacity>
 
                       <View style={{width:'20%',justifyContent:'center', alignItems:'center'}}>
-                      <Text style={{ fontWeight:'bold', fontSize:30, color:'#1e242c'}}>1</Text>
+                      <Text style={{ fontWeight:'bold', fontSize:30, color:'#0f5a71'}}>1</Text>
                       </View>
 
                       <TouchableOpacity style={{width:'38%', height:35,backgroundColor:'#eaece9', alignItems:'center', justifyContent:'center',
                       borderRadius:10}}>
-                        <Ionicons name="add-circle-sharp" size={32} color="1e242c" />
+                        <Ionicons name="add-circle-sharp" size={32} color="#fcce82" />
                       </TouchableOpacity>
 
                     </View>
@@ -102,7 +101,7 @@ export default function cart({navigation}) {
                     <ImageBackground source={require('../assets/backpack.png')}
                       resizeMode="cover" style={{flex:1, alignItems:'flex-end', margin:8}}>
 
-                      <Entypo name="heart" size={30} color="#ffcccc" />
+                      <Entypo name="heart" size={30} color="#fff" />
 
                     </ImageBackground>
 
@@ -119,16 +118,16 @@ export default function cart({navigation}) {
 
                       <TouchableOpacity style={{width:'38%', height:35,backgroundColor:'#eaece9', alignItems:'center', justifyContent:'center',
                       borderRadius:10}}>
-                        <Ionicons name="ios-remove-circle-sharp" size={32} color="1e242c" />
+                        <Ionicons name="ios-remove-circle-sharp" size={32} color="#fcce82" />
                       </TouchableOpacity>
 
                       <View style={{width:'20%',justifyContent:'center', alignItems:'center'}}>
-                      <Text style={{ fontWeight:'bold', fontSize:30, color:'#1e242c'}}>1</Text>
+                      <Text style={{ fontWeight:'bold', fontSize:30, color:'#0f5a71'}}>1</Text>
                       </View>
 
                       <TouchableOpacity style={{width:'38%', height:35,backgroundColor:'#eaece9', alignItems:'center', justifyContent:'center',
                       borderRadius:10}}>
-                        <Ionicons name="add-circle-sharp" size={32} color="1e242c" />
+                        <Ionicons name="add-circle-sharp" size={32} color="#fcce82" />
                       </TouchableOpacity>
                     </View>
 
@@ -141,6 +140,51 @@ export default function cart({navigation}) {
 
 
               {/* Third Row  */}
+
+              <View style={{width:'100%', height:220,alignItems:'center', marginBottom:10}}>
+                
+                <View style={{width:'94%', height:'100%', flexDirection:'row',justifyContent:'space-around', 
+                alignItems:'center', backgroundColor:'#fefefe', borderRadius:20}}>
+
+                  <TouchableOpacity style={{width: '45%', height:'90%', backgroundColor:'#fd9068', borderRadius:20}}>
+
+                    <ImageBackground source={require('../assets/satchel.png')}
+                      resizeMode="cover" style={{flex:1, alignItems:'flex-end', margin:8}}>
+
+                      <Entypo name="heart" size={30} color="#fff" />
+
+                    </ImageBackground>
+
+                  </TouchableOpacity>
+
+                  <View style={{width:'50%', height:'90%',}}>
+                    <Text style={{fontSize:29, fontWeight:'bold', color:'#1e242c'}}>Satchel</Text>
+                    <Text style={{fontSize:20, fontWeight:'200', marginTop:-5, marginBottom:18, color:'#1e242c'}}>women</Text>
+                    <Text style={{fontSize:16, fontWeight:'200', color:'#1e242c'}}>Try the new fleaking style</Text>
+                    <Text style={{fontSize:16, fontWeight:'200', marginBottom:28, color:'#1e242c'}}>Go with the flow</Text>
+
+                    <View style={{flexDirection:'row', justifyContent:'space-around', alignItems: 'center', 
+                    height:45}}>
+
+                      <TouchableOpacity style={{width:'38%', height:35,backgroundColor:'#eaece9', alignItems:'center', justifyContent:'center',
+                      borderRadius:10}}>
+                        <Ionicons name="ios-remove-circle-sharp" size={32} color="#fcce82" />
+                      </TouchableOpacity>
+
+                      <View style={{width:'20%',justifyContent:'center', alignItems:'center'}}>
+                      <Text style={{ fontWeight:'bold', fontSize:30, color:'#0f5a71'}}>1</Text>
+                      </View>
+
+                      <TouchableOpacity style={{width:'38%', height:35,backgroundColor:'#eaece9', alignItems:'center', justifyContent:'center',
+                      borderRadius:10}}>
+                        <Ionicons name="add-circle-sharp" size={32} color="#fcce82" />
+                      </TouchableOpacity>
+                    </View>
+
+                  </View>
+
+                </View>
+              </View>
 
               
 
@@ -156,7 +200,7 @@ export default function cart({navigation}) {
               </View>
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
-               width:'60%', height:60, backgroundColor: '#39736a', borderRadius:10,}}
+               width:'60%', height:60, backgroundColor: '#0f5a71', borderRadius:10,}}
                onPress={() => navigation.push("Collections", { name: "Collections" })}>
                 <Text style={{fontSize:23, fontWeight: 'bold', color:'#efefef'}}> Checkout </Text>
               </TouchableOpacity>
@@ -168,30 +212,34 @@ export default function cart({navigation}) {
             <View style={styles.tabs}>
               
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
-                }}
-                onPress={() => navigation.push("Collections", { name: "Collections" })}>
-                <Ionicons name="ios-home-outline" size={35} color="#b3c0b9" />
+                 }}
+                 onPress={() => navigation.push("Collections", { name: "Collections" })}>
+                <Ionicons name="ios-home-outline" size={35} color="#0f5a71" />
               </TouchableOpacity>
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
-                }}
-                onPress={() => navigation.push("Collections", { name: "Collections" })}>
-                <MaterialCommunityIcons name="food-fork-drink" size={39} color="#b3c0b9" />
+                 }}
+                onPress={() => navigation.push("home", { name: "home" })}>
+                <FontAwesome name="shopping-bag" size={35} color="#0f5a71" />
               </TouchableOpacity>
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
                 }}
                 onPress={() => navigation.push("cart", { name: "cart" })}>
-                <Ionicons name="cart-outline" size={39} color="#b3c0b9" />
+                <Ionicons name="cart-outline" size={39} color="#0f5a71" />
               </TouchableOpacity>
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
-              }}
-                onPress={() => navigation.push("home", { name: "home" })}>
-                <AntDesign name="profile" size={36} color="#b3c0b9" />
+                }}
+                onPress={() => navigation.push("afri", { name: "afri" })}>
+               <FontAwesome name="cc-mastercard" size={35} color="#0f5a71" />
               </TouchableOpacity>
 
-
+              <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
+                }}
+                onPress={() => navigation.push("home", { name: "home" })}>
+                <AntDesign name="profile" size={36} color="#0f5a71" />
+              </TouchableOpacity>
 
             </View>
 
@@ -229,12 +277,13 @@ const styles = StyleSheet.create({
   tabs:{
     flexDirection: 'row',
     width: '100%',
-    height:60,
+    height: 60,
+    position: 'relative',
     justifyContent: 'space-around',
     alignItems:'center', 
-    borderTopLeftRadius:10,
-    borderTopRightRadius:10,
-    backgroundColor:'#f5f4f2', 
+    borderTopLeftRadius:7,
+    borderTopRightRadius:7,
+    backgroundColor:'#fcce82', 
    
  
   },

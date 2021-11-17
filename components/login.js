@@ -30,7 +30,7 @@ export default function login({navigation}) {
 
             <View style={{flex:1, justifyContent: 'flex-end', alignItems:'center', marginBottom:30}}>
 
-                <View style={{}}>
+                <View style={{width:'100%'}}>
 
                 <TextInput style={styles.textinput} placeholder='Username' underlineColorAndroid={'transparent'}></TextInput>
                 <TextInput style={styles.textinput} placeholder='Password' underlineColorAndroid={'transparent'} secureTextEntry></TextInput>
@@ -40,11 +40,11 @@ export default function login({navigation}) {
             </View>
             
 
-            <View style={{height:'9%', width:'100%', alignItems:'baseline', 
-             flexDirection:'row', justifyContent:'space-around', position: 'relative',}}>
+            <View style={{height:'9%', width:'100%', alignItems:'center', 
+             flexDirection:'row', justifyContent:'flex-end', position: 'relative',}}>
               
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row', 
-               width:'30%', height:45, backgroundColor: '#242829', borderRadius:10,}}
+               width:'30%', height:45, backgroundColor: '#242829', borderRadius:10, marginRight:'15%',}}
                onPress={() => navigation.push("Collections", { name: "Collections" })}>
                 <Text style={{fontSize:18, fontWeight: 'bold', color:'#efefef'}}> Go </Text>
                 <Ionicons name="arrow-forward" size={24} color="#efefef" />
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   textinput:{
     height: 40,
     width: '70%',
-    color: '#fff',
+    color: 'black',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
@@ -85,6 +85,8 @@ const styles = StyleSheet.create({
     borderBottomColor: 'grey',
     borderBottomWidth:1,
     marginBottom:20,
+    fontWeight:'500',
+    fontSize:17,
   },
 
 });

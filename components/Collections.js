@@ -13,7 +13,7 @@ import {
 
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 
 export default function home({navigation}) {
@@ -165,6 +165,46 @@ export default function home({navigation}) {
 
 
                 {/* Testing Row */}
+
+                <View style={styles.row}>
+
+                    <View style={{width:'47%',  alignItems: 'center'}}>
+
+                        <TouchableOpacity style={{width:'100%', height: 220, justifyContent:'center', alignItems:'center'}}
+                            onPress={() => navigation.push("home", { name: "home" })}>
+
+                            <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
+                            source={require('../assets/backpack.png')} />
+                            
+                            <View style={{marginTop:-1,}}>
+                            <Text style={{color:'#0f5a71', fontSize:22,fontWeight: 'bold' }}>Crossbody</Text>
+                            
+                            </View>
+
+                        </TouchableOpacity>
+
+                    </View>
+
+                        {/* OTHER SIDE */}
+
+                    <View style={{width:'47%', alignItems: 'center'}}>
+
+                        <TouchableOpacity style={{width:'100%',  height:220, justifyContent:'center', alignItems:'center'}}
+                            onPress={() => navigation.push("home", { name: "home" })}>
+
+                            <Image style={{width:'100%', height:'75%', borderTopLeftRadius:10, borderTopRightRadius:10}}
+                            source={require('../assets/bag2.png')} />
+                            
+                            <View style={{marginTop:-1,}}>
+                            <Text style={{color:'#0f5a71', fontSize:22,fontWeight: 'bold' }}>Baguette</Text>
+
+                            </View>
+
+                        </TouchableOpacity>
+
+                    </View>
+
+                </View>
                 
 
             </ScrollView>
@@ -181,14 +221,20 @@ export default function home({navigation}) {
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
                  }}
-                onPress={() => navigation.push("Collections", { name: "Collections" })}>
-                <MaterialCommunityIcons name="food-fork-drink" size={39} color="#0f5a71" />
+                onPress={() => navigation.push("home", { name: "home" })}>
+                <FontAwesome name="shopping-bag" size={35} color="#0f5a71" />
               </TouchableOpacity>
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
                 }}
                 onPress={() => navigation.push("cart", { name: "cart" })}>
                 <Ionicons name="cart-outline" size={39} color="#0f5a71" />
+              </TouchableOpacity>
+
+              <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
+                }}
+                onPress={() => navigation.push("afri", { name: "afri" })}>
+               <FontAwesome name="cc-mastercard" size={35} color="#0f5a71" />
               </TouchableOpacity>
 
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center',flexDirection:'row',
